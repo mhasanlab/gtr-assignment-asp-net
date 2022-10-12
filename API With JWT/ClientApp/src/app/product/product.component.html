@@ -1,0 +1,14 @@
+<!-- <h2>Product List From Real API</h2>
+<ul>
+  <li *ngFor="let product of products">
+    {{product.title}}
+  </li>
+</ul> -->
+
+{{products| json}}
+
+<ul>
+  <li *ngFor="let item of products$ | async">
+    {{item.title}}
+  </li>
+</ul>
